@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta property="og:title" content="Mikisan Soap">
+	<meta property="og:image" content="https://example.com/images/image.jpg">
+	<meta property="og:description" content="Put the website description here.">
+	<meta property="og:url" content="https://example.com/images/image.jpg">
+	<meta name="twitter:card" content="https://example.com/images/image.jpg">
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>Mikisan Soap</title>
+	<!-- TemplateEndEditable -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link href="plugins/font-awesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet" />
+	<link href="plugins/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<link href="plugins/slick/slick.css" type="text/css" rel="stylesheet" />
+	<link href="plugins/slick/slick-theme.css" type="text/css" rel="stylesheet" />
+	<link href="plugins/navik/navik.menu.css" type="text/css" rel="stylesheet" />
+	<link href="plugins/cookie-alert/cookiealert.css" type="text/css" rel="stylesheet" />
+	<link href="css/animate.min.css" type="text/css" rel="stylesheet" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<div class="top"><i class="fa fa-chevron-up fa-2x"></i></div>
+	
+	<header id="home">
+		<div class="main-navigation">
+			<div class="navik-header header-shadow">
+				<div class="container">
+
+					<!-- Navik header -->
+					<div class="navik-header-container">
+
+						<!--Logo-->
+						<div class="logo" data-mobile-logo="images/misc/nikisan-logo-small.jpg" data-sticky-logo="images/misc/nikisan-logo-small.jpg">
+							<a href="index.htm"><img src="images/misc/nikisan-logo.jpg" alt="logo"/></a>
+						</div>
+
+						<!-- Burger menu -->
+						<div class="burger-menu">
+							<div class="line-menu line-half first-line"></div>
+							<div class="line-menu"></div>
+							<div class="line-menu line-half last-line"></div>
+						</div>
+
+						<!--Navigation menu-->
+						<nav class="navik-menu menu-caret menu-hover-3 submenu-top-border submenu-scale">
+							<ul>
+								<li class="current-menu"><a href="#home">Home</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#products">Products</a></li>
+								<li><a href="#faq">FAQs</a></li>
+								<li><a href="#connect">Connect</a></li>
+							</ul>
+						</nav>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- TemplateBeginEditable name="content area" -->
+		
+		<div class="main-banner">
+			<div class="multiple-items">
+				
+			</div>
+		</div>
+	</header>
+	
+	
+    <section class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					content here
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- TemplateEndEditable -->
+	<div class="alert text-center cookiealert" role="alert">
+		<strong>Do you like cookies?</strong> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="#" target="_blank">Learn more</a>
+		<button type="button" class="btn btn-primary btn-sm acceptcookies px-3" aria-label="Close">
+			I agree
+		</button>
+	</div>
+	
+	<footer class="wrapper bg-footer pb-1" id="connect">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<img src="../images/misc/nikisan-logo-black.jpg" />
+					<hr class="space m">
+					<ul class="share-this footer">
+						<li><a href="https://www.facebook.com/mikisanofficial/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://www.instagram.com/mikisanofficial/" target="_blank" class="pinterest"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://twitter.com/mikisan2018" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-5 col-md-6 mb-4">
+					<h5>Contact Info</h5>
+					<small>Office address</small>
+					<ul class="ul-none no-padding">
+						<li>#196 NORTHWEST IPIL ST. MARIKINA HEIGTS, MARIKINA CITY</li>
+					</ul>
+					<small>Email address</small>
+					<ul class="ul-none no-padding">
+						<li>mikisansoap@gmail.com</li>
+					</ul>					
+				</div>
+				<div class="col-lg-3 col-md-12">
+					<h5>Contact Numbers</h5>
+					<small>Mobile</small>
+					<ul class="ul-none no-padding">
+						<li>(+63999) 888 7588</li>
+						<li>(+63917) 839 7373</li>
+					</ul>
+					<small>Phone</small>
+					<ul class="ul-none no-padding">
+						<li>(+632) 8998 2357</li>
+						<li>(+632) 8475 3723</li>
+					</ul>
+				</div>
+				<div class="col-12">
+					<div class="copyright">
+						<p class="text-center">© 2020 - <span><a href="index.htm">Mikisan</a></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script type="text/javascript">
+        var bannerFxIn = "bounceInDown";
+        var bannerFxOut = "zoomOutDown";
+        var bannerCaptionFxIn = "fadeInUp";
+        var autoPlayTimeout = "4000";
+        var bannerID = "banner";
+    </script>
+	
+	<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/popper.min.js" type="text/javascript"></script>
+	<script src="plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="plugins/cookie-alert/cookiealert.js" type="text/javascript"></script>
+	<script src="plugins/slick/slick.js" type="text/javascript"></script>
+	<script src="plugins/slick/slick.extension.js" type="text/javascript"></script>
+	<script src="plugins/navik/navik.menu.js" type="text/javascript"></script>
+	
+</body>
+</html>
