@@ -5,128 +5,160 @@ namespace App\Helpers\Webfocus;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class Setting {
+class Setting
+{
 
-    public static function info() {
+	public static function info()
+	{
 
-        $setting = DB::table('settings')->first();
-        $setting->menu = DB::table('menus')->where('is_active', 1)->first();
-        return $setting;
-
+		$setting = DB::table('settings')->first();
+		$setting->menu = DB::table('menus')->where('is_active', 1)->first();
+		return $setting;
 	}
 
 	public static function getFaviconLogo()
-    {
-        $settings = DB::table('settings')->where('id',1)->first();
+	{
+		$settings = DB::table('settings')->where('id', 1)->first();
 
-        return $settings;
-    }
-
-    public static function social_account($sm)
-    {
-        $account = DB::table('social_media')->where('name','=',$sm)->first();
-
-        if($account === null){
-            return false;
-        }
-        else{
-            return $account;
-        }
-
-    }
-
-    public static function getFooter()
-    {
-
-        $footer = DB::table('pages')->where('slug', 'footer')->where('name', 'footer')->first();
-
-        return $footer;
-    }
-
-    public static function date_for_listing($date) {
-        if ($date == null || trim($date) == '') {
-            return "-";
-        }
-        else if ($date != null && strtotime($date) < strtotime('-1 day')) {
-            return Carbon::parse($date)->isoFormat('lll');
-        }
-
-        return Carbon::parse($date)->diffForHumans();
+		return $settings;
 	}
 
-	public static function date_for_news_list($date) {
-        if ($date != null && strtotime($date) > strtotime('-1 day')) {
-            return Carbon::parse($date)->diffForHumans();
-        } else {
-			return 'on '.date('M d, Y h:i A', strtotime($date));
+	public static function social_account($sm)
+	{
+		$account = DB::table('social_media')->where('name', '=', $sm)->first();
+
+		if ($account === null) {
+			return false;
+		} else {
+			return $account;
+		}
+	}
+
+	public static function getFooter()
+	{
+		$footer = DB::table('pages')->where('slug', 'footer')->where('name', 'footer')->first();
+		return $footer;
+	}
+
+	public static function getFaq()
+	{
+		$faqExist = DB::table('pages')->where('slug', 'faq')->exists();
+		if ($faqExist) {
+			$faq = DB::table('pages')->where('slug', 'faq')->first();
+			return $faq;
 		}
 
-    }
+		return '';
+	}
 
-    public function social($page,$account){
-    	if($page == 'facebook')
-    		return '
+	public static function getAbout()
+	{
+		$aboutExist = DB::table('pages')->where('slug', 'about')->exists();
+		if ($aboutExist) {
+			$about = DB::table('pages')->where('slug', 'about')->first();
+			return $about;
+		}
+
+		return '';
+	}
+
+	public static function getProduct()
+	{
+		$productExist = DB::table('pages')->where('slug', 'price-list')->exists();
+		if ($productExist) {
+			$product = DB::table('pages')->where('slug', 'price-list')->first();
+			return $product;
+		}
+
+		return '';
+	}
+
+
+	public static function date_for_listing($date)
+	{
+		if ($date == null || trim($date) == '') {
+			return "-";
+		} else if ($date != null && strtotime($date) < strtotime('-1 day')) {
+			return Carbon::parse($date)->isoFormat('lll');
+		}
+
+		return Carbon::parse($date)->diffForHumans();
+	}
+
+	public static function date_for_news_list($date)
+	{
+		if ($date != null && strtotime($date) > strtotime('-1 day')) {
+			return Carbon::parse($date)->diffForHumans();
+		} else {
+			return 'on ' . date('M d, Y h:i A', strtotime($date));
+		}
+	}
+
+	public function social($page, $account)
+	{
+		if ($page == 'facebook')
+			return '
 				jsSocials.shares.facebook = {
 	                logo: "fa fa-facebook-f",
-	                shareUrl: "https://facebook.com/'.$account.'",
+	                shareUrl: "https://facebook.com/' . $account . '",
 	                getCount: function(data) {
 	                    return data.count;
 	                }
 	            };
     		';
-    	elseif($page == 'twitter')
-    		return '
+		elseif ($page == 'twitter')
+			return '
 				jsSocials.shares.twitter = {
 	                logo: "fa fa-twitter",
-	                shareUrl: "https://twitter.com/'.$account.'",
+	                shareUrl: "https://twitter.com/' . $account . '",
 	                getCount: function(data) {
 	                    return data.count;
 	                }
 	            };
     		';
-    	elseif($page == 'instagram')
-    		return '
+		elseif ($page == 'instagram')
+			return '
 				jsSocials.shares.instagram = {
 	                logo: "fa fa-instagram",
-	                shareUrl: "https://instagram.com/'.$account.'",
+	                shareUrl: "https://instagram.com/' . $account . '",
 	                getCount: function(data) {
 	                    return data.count;
 	                }
 	            };
     		';
-    	elseif($page == 'google')
-    		return '
+		elseif ($page == 'google')
+			return '
 				jsSocials.shares.googleplus = {
 	                logo: "fa fa-google-plus",
-	                shareUrl: "https://plus.google.com/'.$account.'",
+	                shareUrl: "https://plus.google.com/' . $account . '",
 	                getCount: function(data) {
 	                    return data.count;
 	                }
 	            };
     		';
-    	elseif($page == 'dribble')
-    		return '
+		elseif ($page == 'dribble')
+			return '
 				jsSocials.shares.dribbble = {
 	                logo: "fa fa-dribbble",
-	                shareUrl: "https://dribbble.com/'.$account.'",
+	                shareUrl: "https://dribbble.com/' . $account . '",
 	                getCount: function(data) {
 	                    return data.count;
 	                }
 	            };
     		';
-    }
+	}
 
-    public static function get_company_logo_storage_path()
-    {
-        $settings = DB::table('settings')->where('id',1)->first();
+	public static function get_company_logo_storage_path()
+	{
+		$settings = DB::table('settings')->where('id', 1)->first();
 
-        return asset('storage').'/logos/'.$settings->company_logo;
-    }
+		return asset('storage') . '/logos/' . $settings->company_logo;
+	}
 
-    public static function get_company_favicon_storage_path()
-    {
-        $settings = DB::table('settings')->where('id',1)->first();
+	public static function get_company_favicon_storage_path()
+	{
+		$settings = DB::table('settings')->where('id', 1)->first();
 
-        return asset('storage').'/icons/'.$settings->website_favicon;
-    }
+		return asset('storage') . '/icons/' . $settings->website_favicon;
+	}
 }

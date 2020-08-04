@@ -37,15 +37,6 @@
 
     @yield('content')
 
-
-
-
-    
-
-    {{-- @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.layout.footer')
-
-    @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.layout.privacy-policy') --}}
-
     @if(!empty($page->album) && $page->album->id != 0)
         <script type="text/javascript">
             let bannerFxIn = "{{ $page->album->animationIn->value }}";
