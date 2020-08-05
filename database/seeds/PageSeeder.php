@@ -62,12 +62,12 @@ class PageSeeder extends Seeder
         <small>Office address</small>
         
         <ul class="ul-none no-padding">
-            <li>#196 NORTHWEST IPIL ST. MARIKINA HEIGTS, MARIKINA CITY</li>
+            <li>' . Setting::info()->company_address . '</li>
         </ul>
         <small>Email address</small>
         
         <ul class="ul-none no-padding">
-            <li>mikisansoap@gmail.com</li>
+            <li>' . Setting::info()->email . '</li>
         </ul>
         </div>
         
@@ -89,7 +89,7 @@ class PageSeeder extends Seeder
         
         <div class="col-12">
         <div class="copyright">
-        <p class="text-center">&copy; 2020 - <span><a href="index.htm">Mikisan</a></span></p>
+        <p class="text-center">&copy; 2020 - <span><a href="/">Mikisan</a></span></p>
         </div>
         </div>
         </div>
