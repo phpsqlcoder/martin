@@ -16,7 +16,7 @@ class MenusHasPagesSeeder extends Seeder
                 'menu_id' => 1,
                 'page_id' => 1,
                 'parent_id' => 0,
-                'page_order'=> 1,
+                'page_order' => 1,
                 'uri' => '',
                 'label' => '',
                 'target' => '',
@@ -29,7 +29,7 @@ class MenusHasPagesSeeder extends Seeder
                 'menu_id' => 1,
                 'page_id' => 2,
                 'parent_id' => 0,
-                'page_order'=> 2,
+                'page_order' => 2,
                 'uri' => '',
                 'label' => '',
                 'target' => '',
@@ -42,7 +42,7 @@ class MenusHasPagesSeeder extends Seeder
                 'menu_id' => 1,
                 'page_id' => 3,
                 'parent_id' => 0,
-                'page_order'=> 3,
+                'page_order' => 3,
                 'uri' => '',
                 'label' => '',
                 'target' => '',
@@ -53,9 +53,9 @@ class MenusHasPagesSeeder extends Seeder
             [
 
                 'menu_id' => 1,
-                'page_id' => 4,
+                'page_id' => 5,
                 'parent_id' => 0,
-                'page_order'=> 4,
+                'page_order' => 4,
                 'uri' => '',
                 'label' => '',
                 'target' => '',
@@ -63,19 +63,7 @@ class MenusHasPagesSeeder extends Seeder
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
             ],
-            [
 
-                'menu_id' => 1,
-                'page_id' => 6,
-                'parent_id' => 0,
-                'page_order'=> 5,
-                'uri' => '',
-                'label' => '',
-                'target' => '',
-                'type' => 'page',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")
-            ]
         ]);
     }
 }

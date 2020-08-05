@@ -13,90 +13,158 @@ class PageSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
 
-        $homeHTML = '<section class="product-promo-wrapper wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="product-promo-items">
-                            <div class="product-promo-item">
-                                <div class="product-promo-image"><a href="'.url('/').'/products"><img src="'.\URL::to('/').'/theme/richams/images/misc/promo1.jpg" /></a></div>
-                            </div>
-                            <div class="product-promo-item">
-                                <div class="product-promo-image"><a href="'.url('/').'/products"><img src="'.\URL::to('/').'/theme/richams/images/misc/promo2.jpg" /></a></div>
-                            </div>
-                            <div class="product-promo-item">
-                                <div class="product-promo-image"><a href="'.url('/').'/products"><img src="'.\URL::to('/').'/theme/richams/images/misc/promo3.jpg" /></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        $homeHTML = '&nbsp;';
+
+        $aboutHTML = '<section class="wrapper" id="about">
+        <div class="container text-center">
+        <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 my-5">
+        <h2>ABOUT</h2>
+        
+        <p>Mikisan is specially formulated with kojic acid dipalmitate, a more effective form of kojic acid that penetrates the deep layers of the skin and procedures excellent effects in skin whitening. Keeping the balance of your skin&rsquo;s natural moisture.</p>
+        </div>
+        
+        <div class="col-lg-10 offset-lg-1">
+        <div class="carousel-standard">
+        <div class="px-3"><img src="theme/mikisan/images/misc/beauty1.jpg" /></div>
+        
+        <div class="px-3"><img src="theme/mikisan/images/misc/beauty2.jpg" /></div>
+        
+        <div class="px-3"><img src="theme/mikisan/images/misc/beauty3.jpg" /></div>
+        </div>
+        </div>
+        
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 my-5">
+        <h2>BEAUTY</h2>
+        
+        <p>A visibly whiter and flawless look is what we always wanted. Enjoy a burst of refreshness and experience radiant skin with Miki San, the perfect choice for a smooth, lighter, and healthier skin.</p>
+        </div>
+        </div>
+        </div>
         </section>
-        {Featured Products}
-        {Best Seller Products}
-        {Featured Articles}';
+        ';
 
-        $aboutHTML = "<p>Sed quis iaculis risus, in dapibus nisi. Etiam dictum, ligula eget vehicula facilisis, turpis ipsum euismod tortor, at tristique lectus turpis vel lorem. Praesent in libero commodo dolor mollis consequat. Quisque in metus fringilla, aliquam sem eu, ornare ipsum. Donec commodo sagittis lacinia. Aenean elementum porttitor metus, ac rutrum ex condimentum eget. Ut est purus, interdum id sem nec, vehicula scelerisque purus. Quisque nec neque risus. Aliquam rhoncus lectus vitae massa imperdiet ullamcorper. Nunc sodales vehicula iaculis. </p>
-					<p>Sed vel placerat metus. Etiam consequat, nisi semper lobortis posuere, ex sem pretium lectus, ac pulvinar diam nibh tincidunt felis. Duis eget facilisis quam, in accumsan erat. Duis ornare ut augue nec efficitur. Donec in sem accumsan, dapibus magna vel, iaculis nisi. Duis sed ante vulputate, fermentum ligula eget, luctus nulla. Nunc sodales congue quam, non cursus elit pellentesque sed. Integer a congue sapien, vel pulvinar erat. Vestibulum eu ullamcorper nibh. Nullam euismod ex quis arcu fermentum molestie. Vivamus volutpat ut urna eget cursus. </p>";
 
-        $contact_us = '<div class="col-md-4">
-                <div class="contact-details">
-                    <h4 class="secondary-title">Office Address</h4>
-                    <i class="fa fa-map-marker-alt fa-3x"></i>
-                    <p>Aliquam iaculis metus eget magna feugiat hendrerit</p>
-                    <div class="gap-50"></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-details">
-                    <h4 class="secondary-title">Contact Number</h4>
-                    <i class="fa fa-phone fa-3x"></i>
-                    <p>+63 919 172 3412
-                        <br>+63 2 283 9047</p>
-                    <div class="gap-50"></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-details">
-                    <h4 class="secondary-title">Email Address</h4>
-                    <i class="fa fa-envelope-open fa-3x"></i>
-                    <p><a href="#">name@website.com.ph</a></p>
-                    <p><a href="#">othename@webstie.com.ph</a></p>
-                    <div class="gap-50"></div>
-                </div>
-            </div>';
+        $footerHTML = '<footer class="wrapper bg-footer pb-1" id="connect">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4"><img src="theme/mikisan/images/misc/nikisan-logo-black.jpg" />
+        <hr class="space m" />
+        <ul class="share-this footer">
+            <li><a class="facebook" href="https://www.facebook.com/mikisanofficial/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="pinterest" href="https://www.instagram.com/mikisanofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/mikisan2018" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        </div>
+        
+        <div class="col-lg-5 col-md-6 mb-4">
+        <h5>Contact Info</h5>
+        <small>Office address</small>
+        
+        <ul class="ul-none no-padding">
+            <li>#196 NORTHWEST IPIL ST. MARIKINA HEIGTS, MARIKINA CITY</li>
+        </ul>
+        <small>Email address</small>
+        
+        <ul class="ul-none no-padding">
+            <li>mikisansoap@gmail.com</li>
+        </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-12">
+        <h5>Contact Numbers</h5>
+        <small>Mobile</small>
+        
+        <ul class="ul-none no-padding">
+            <li>(+63999) 888 7588</li>
+            <li>(+63917) 839 7373</li>
+        </ul>
+        <small>Phone</small>
+        
+        <ul class="ul-none no-padding">
+            <li>(+632) 8998 2357</li>
+            <li>(+632) 8475 3723</li>
+        </ul>
+        </div>
+        
+        <div class="col-12">
+        <div class="copyright">
+        <p class="text-center">&copy; 2020 - <span><a href="index.htm">Mikisan</a></span></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </footer>
+        ';
 
-        $footerHTML = '<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h3 class="footer-title">About us</h3>
-					<p>Zenshop is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
-					<img src="'.\URL::to('/').'/theme/richams/images/rich-ams-logo-small.png" />
-				</div>
-				<div class="col-md-2">
-					<h3 class="footer-title">Information</h3>
-					<ul>
-						<li><a href="'.url('/').'">home</a></li>
-						<li><a href="'.url('/').'/about-us">about us</a></li>
-						<li><a href="'.url('/').'/products">our products</a></li>
-						<li><a href="'.url('/').'/contact-us">contact us</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<h3 class="footer-title">Contact us</h3>
-					<ul>
-						<li>+84 3333 6789</li>
-						<li>262 Milacina Mrest Street Behansed, United State.</li>
-						<li class="social-media"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></li>
-					</ul>
-				</div>
-				<div class="col-md-12">
-					<div class="footer-copyright">
-						Created by WebFocus Solutions, Inc. © 2019 - <span>Rich Ams Global</span>
-					</div>
-				</div>
-			</div>
-		</div>';
+        $productsHTML = '<section class="wrapper bg-main text-white" id="products">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-5 offset-md-1">
+        <h2>PRODUCT PRICE LIST</h2>
+        
+        <table class="table border-bottom my-4 text-white">
+            <tbody>
+                <tr>
+                    <td>Miki San 45g packs by 3 (soon)</td>
+                    <td class="text-right">₱48.00</td>
+                </tr>
+                <tr>
+                    <td>Miki San 90g packs by 3</td>
+                    <td class="text-right">₱99.00</td>
+                </tr>
+                <tr>
+                    <td>Miki San 125g packs by 3</td>
+                    <td class="text-right">₱139.00</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <div class="col-md-5">
+        <p><img src="theme/mikisan/images/misc/mikisan-soap.jpg" /></p>
+        </div>
+        </div>
+        </div>
+        </section>
+        ';
+
+        $faqHTML = '<section class="wrapper" id="faq">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-10 offset-md-1">
+        <h2 class="text-center">FAQs</h2>
+        
+        <table class="table table-borderless table-sm my-4 tbl-faq">
+            <tbody>
+                <tr>
+                    <td>
+                    <p class="m-0"><span class="h2">Q.</span> What are the benefits I can get from using Mikisan everyday?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p class="m-0"><span class="h2">A.</span> It keeps the balance of your skin&rsquo;s natural moisture. Also it aids to achieve lighter and younger looking skin.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p class="m-0"><span class="h2">Q.</span> Where can we buy Mikisan?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p class="m-0"><span class="h2">A.</span> We are exclusively available at all Watsons Stores Nationwide.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        </section>
+        
+        ';
 
         $newsListingContent = '';
         $pages = [
@@ -121,13 +189,13 @@ class PageSeeder extends Seeder
             [
                 'parent_page_id' => 0,
                 'album_id' => 0,
-                'slug' => 'about-us',
-                'name' => 'About Us',
-                'label' => 'About Us',
+                'slug' => 'about',
+                'name' => 'About',
+                'label' => 'About',
                 'contents' => $aboutHTML,
                 'status' => 'PUBLISHED',
                 'page_type' => 'standard',
-                'image_url' => \URL::to('/').'/theme/'.env('FRONTEND_TEMPLATE').'/images/banners/sub-banner-bg.jpg',
+                'image_url' => '',
                 'meta_title' => 'About Us',
                 'meta_keyword' => 'About Us',
                 'meta_description' => 'About Us page',
@@ -136,40 +204,21 @@ class PageSeeder extends Seeder
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
             ],
-
-            [
-                'parent_page_id' => 0,
-                'album_id' => 2,
-                'slug' => 'contact-us',
-                'name' => 'Contact Us',
-                'label' => 'Contact Us',
-                'contents' => $contact_us,
-                'status' => 'PUBLISHED',
-                'page_type' => 'customize',
-                'image_url' => '',
-                'meta_title' => 'Contact Us',
-                'meta_keyword' => 'Contact Us',
-                'meta_description' => 'Contact Us page',
-                'user_id' => 1,
-                'template' => 'contact-us',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s")
-            ],
             [
                 'parent_page_id' => 0,
                 'album_id' => 0,
-                'slug' => 'news',
-                'name' => 'News',
-                'label' => 'News',
-                'contents' => '',
+                'slug' => 'faq',
+                'name' => 'faq',
+                'label' => 'faq',
+                'contents' => $faqHTML,
                 'status' => 'PUBLISHED',
-                'page_type' => 'customize',
+                'page_type' => 'standard',
                 'image_url' => '',
-                'meta_title' => 'News',
-                'meta_keyword' => 'news',
-                'meta_description' => 'News page',
+                'meta_title' => '',
+                'meta_keyword' => '',
+                'meta_description' => '',
                 'user_id' => 1,
-                'template' => 'news',
+                'template' => '',
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
             ],
@@ -197,9 +246,9 @@ class PageSeeder extends Seeder
                 'slug' => 'products',
                 'name' => 'Products',
                 'label' => 'Products',
-                'contents' => '',
+                'contents' => $productsHTML,
                 'status' => 'PUBLISHED',
-                'page_type' => 'customize',
+                'page_type' => 'standard',
                 'image_url' => '',
                 'meta_title' => '',
                 'meta_keyword' => '',
