@@ -6,8 +6,10 @@
 @section('content')
 
     <div class="main-banner">
-        {!! $page->contents !!}
+        {{-- {!! $page->contents !!} --}}
+        @include('theme.'.env('FRONTEND_TEMPLATE', 'cerebro').'.layout.banner')
     </div>
+
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.about-us')
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.products')
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.faq')
