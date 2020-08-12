@@ -7,6 +7,7 @@
 
     <div class="main-banner">
         {!! $page->contents !!}
+        {{-- @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.about-us') --}}
     </div>
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.about-us')
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.products')

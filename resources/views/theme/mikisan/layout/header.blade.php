@@ -27,4 +27,5 @@
             </div>
         </div>
     </div>
+</header>
     <!-- InstanceBeginEditable name="content area" -->

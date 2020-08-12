@@ -29,11 +29,11 @@
                     <li @if (url()->current() == route('albums.edit', 1)) class="active" @endif><a href="{{ route('albums.edit', 1) }}">Manage Home Banner</a></li>
                 @endif
 
-                <li @if (\Route::current()->getName() == 'albums.index' || (\Route::current()->getName() == 'albums.edit' && url()->current() != route('albums.edit', 1))) class="active" @endif><a href="{{ route('albums.index') }}">Manage Subpage Banners</a></li>
+               {{--  <li @if (\Route::current()->getName() == 'albums.index' || (\Route::current()->getName() == 'albums.edit' && url()->current() != route('albums.edit', 1))) class="active" @endif><a href="{{ route('albums.index') }}">Manage Subpage Banners</a></li>
 
                 @if(auth()->user()->has_access_to_route('albums.create'))
                     <li @if (\Route::current()->getName() == 'albums.create') class="active" @endif><a href="{{ route('albums.create') }}">Create an Album</a></li>
-                @endif
+                @endif --}}
             </ul>
         </li>
     @endif
@@ -43,7 +43,7 @@
         </li>
     @endif
     @if (auth()->user()->has_access_to_menu_module())
-        <li class="nav-item with-sub @if (request()->routeIs('menus*')) active show @endif">
+        <li style="display:none;" class="nav-item with-sub @if (request()->routeIs('menus*')) active show @endif">
             <a href="" class="nav-link"><i data-feather="menu"></i> <span>Menu</span></a>
             <ul>
                 <li @if (\Route::current()->getName() == 'menus.edit' || \Route::current()->getName() == 'menus.index') class="active" @endif><a href="{{ route('menus.index') }}">Manage Menu</a></li>
@@ -55,7 +55,7 @@
         </li>
     @endif
     @if (auth()->user()->has_access_to_news_module() || auth()->user()->has_access_to_news_categories_module())
-        <li class="nav-item with-sub @if (request()->routeIs('news*') || request()->routeIs('news-categories*')) active show @endif">
+        <li style="display:none;" class="nav-item with-sub @if (request()->routeIs('news*') || request()->routeIs('news-categories*')) active show @endif">
             <a href="" class="nav-link"><i data-feather="edit"></i> <span>News</span></a>
             <ul>
                 @if (auth()->user()->has_access_to_news_module())
