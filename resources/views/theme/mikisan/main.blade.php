@@ -32,7 +32,6 @@
 </head>
 <body>
     
-
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.layout.header')
 
     @yield('content')
@@ -47,14 +46,6 @@
         </script>
     @endif
 
-    <script type="text/javascript">
-        var bannerFxIn = "bounceInDown";
-        var bannerFxOut = "zoomOutDown";
-        var bannerCaptionFxIn = "fadeInUp";
-        var autoPlayTimeout = "4000";
-        var bannerID = "banner";
-    </script>
-	{{-- Custom JS Scripts--}}
 	<script src="{{ asset('theme/mikisan/js/jquery-2.2.0.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('theme/mikisan/js/script.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('theme/mikisan/js/popper.min.js') }}" type="text/javascript"></script>
@@ -68,6 +59,18 @@
 
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script src="{{ asset('js/privacy_policy.js') }}"></script>
+
+    <script>
+        var header = document.getElementById("navmenu-items");
+        var btns = header.getElementsByTagName("li");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("current-menu");
+          current[0].className = current[0].className.replace("current-menu", "");
+          this.className += "current-menu";
+          });
+        }
+    </script>
     @yield('customjs')
 
     @yield('pagejs')

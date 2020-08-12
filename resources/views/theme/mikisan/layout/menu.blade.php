@@ -1,5 +1,5 @@
     <nav class="navik-menu menu-caret menu-hover-3 submenu-top-border submenu-scale">
-        <ul>
+        <ul id='navmenu-items'>
             @php
                 $menu = \App\Menu::where('is_active', 1)->first();
             @endphp

@@ -64,9 +64,9 @@ class Setting
 
 	public static function getProduct()
 	{
-		$productExist = DB::table('pages')->where('slug', 'price-list')->exists();
+		$productExist = DB::table('pages')->where('slug', 'products')->exists();
 		if ($productExist) {
-			$product = DB::table('pages')->where('slug', 'price-list')->first();
+			$product = DB::table('pages')->where('slug', 'products')->first();
 			return $product;
 		}
 

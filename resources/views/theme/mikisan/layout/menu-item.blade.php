@@ -1,7 +1,7 @@
 @php $page = $item->page; @endphp
 @if (!empty($page) && $item->is_page_type() && $page->is_published())
     <li @if(url()->current() == $page->get_url() || ($page->id == 1 && url()->current() == env('APP_URL'))) class="current-menu" @endif @if ($item->has_sub_menus()) class="" @endif>
-        <a href="{{ strtolower($page->label) == 'home' ? '/' : '#'.strtolower($page->label) }}">
+        <a href="#{{ strtolower($page->label) }}">
             @if (!empty($page->label))
                 {{ $page->label }}
             @else
