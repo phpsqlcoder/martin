@@ -7,9 +7,10 @@
 
     <div class="main-banner">
 
-        {!! $page->contents !!}
+        
   
         @include('theme.'.env('FRONTEND_TEMPLATE', 'cerebro').'.layout.banner')
+        {{-- {!! $page->contents !!} --}}
 
     </div>
 
