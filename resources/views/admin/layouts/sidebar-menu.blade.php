@@ -30,10 +30,10 @@
                 @endif
 
                {{--  <li @if (\Route::current()->getName() == 'albums.index' || (\Route::current()->getName() == 'albums.edit' && url()->current() != route('albums.edit', 1))) class="active" @endif><a href="{{ route('albums.index') }}">Manage Subpage Banners</a></li>
-
+ --}}
                 @if(auth()->user()->has_access_to_route('albums.create'))
                     <li @if (\Route::current()->getName() == 'albums.create') class="active" @endif><a href="{{ route('albums.create') }}">Create an Album</a></li>
-                @endif --}}
+                @endif
             </ul>
         </li>
     @endif
