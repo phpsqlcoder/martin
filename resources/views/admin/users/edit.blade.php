@@ -30,13 +30,13 @@
                 @method('PUT')
                 <div class="form-group">
                     <label class="d-block">First Name *</label>
-                    <input type="text" name="fname" id="fname" maxlength="150" value="{{ old('fname', $user->firstname)}}" class="form-control @error('fname') is-invalid @enderror" required>
+                    <input type="text" name="fname" id="fname" maxlength="90" value="{{ old('fname', $user->firstname)}}" class="form-control @error('fname') is-invalid @enderror" required>
                     @hasError(['inputName' => 'fname'])
                     @endhasError
                 </div>
                 <div class="form-group">
                     <label class="d-block">Last Name *</label>
-                    <input type="text" name="lname" id="lname" maxlength="150" value="{{ old('lname', $user->lastname)}}" class="form-control @error('lname') is-invalid @enderror" required>
+                    <input type="text" name="lname" id="lname" maxlength="90" value="{{ old('lname', $user->lastname)}}" class="form-control @error('lname') is-invalid @enderror" required>
                     @hasError(['inputName' => 'lname'])
                     @endhasError
                 </div>

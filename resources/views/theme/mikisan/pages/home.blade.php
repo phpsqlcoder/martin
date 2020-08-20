@@ -5,14 +5,14 @@
 
 @section('content')
 
-    <div class="main-banner">
+   {{--  <div class="main-banner">
 
         
   
         @include('theme.'.env('FRONTEND_TEMPLATE', 'cerebro').'.layout.banner')
-        {{-- {!! $page->contents !!} --}}
+        {{-- {!! $page->contents !!} 
 
-    </div>
+    </div> --}}
 
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.about-us')
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.pages.products')

@@ -100,14 +100,14 @@
             <div class="col-md-12">
                 <div class="table-list mg-b-10">
                     <div class="table-responsive-lg">
-                        <table class="table mg-b-0 table-light table-hover" style="width:100%;">
+                        <table class="table mg-b-0 table-light table-hover">
                             <thead>
                             <tr>
-                                <th scope="col" width="30%">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Options</th>
+                                <th style="width: 40%;">Name</th>
+                                <th style="width: 20%;">Email</th>
+                                <th style="width: 10%;">Role</th>
+                                <th style="width: 10%;">Status</th>
+                                <th style="width: 20%;">Options</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -118,9 +118,9 @@
                                     @endif
                                 @endif
                                 <tr>
-                                    <th>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;">
                                         <strong @if($user->is_active == 0) style="text-decoration:line-through;" @endif> {{$user->fullname}}</strong>
-                                    </th>
+                                    </td>
                                     <td>{{ $user->email }}</td>
                                     <td><span class="badge badge-primary">{{ \App\User::userRole($user->role_id) }}</span></td>
                                     <td>

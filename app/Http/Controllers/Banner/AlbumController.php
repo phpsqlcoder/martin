@@ -357,8 +357,9 @@ class AlbumController extends Controller
         foreach ($banners as $key => $banner) {
             $temporaryPath = $this->get_banner_path_in_storage($banners[$key]['image_path']);
             $fileName = $this->get_banner_file_name($banners[$key]['image_path']);
+            //$bannerFolder = 'banners/';
             $bannerFolder = '';
-
+           // dd($temporaryPath." aaa ".$bannerFolder.$fileName);
             $banners[$key]['image_path'] = $this->move_to_banners_folder($temporaryPath, $bannerFolder.$fileName);
         }
 
