@@ -11,7 +11,7 @@
             @if(Auth::user()->avatar == '')
                 <div class="d-flex justify-content-center">
                     <div class="avatar wd-100">
-                        <a href="{{ route('account.edit', Auth::user()->id ) }}">
+                        <a href="{{ route('account.edit') }}">
                            <img src="{{ asset('images/user.png') }}" class="rounded-circle" alt="">
                         </a>
                     </div>
