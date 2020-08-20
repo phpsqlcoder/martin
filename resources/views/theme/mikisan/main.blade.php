@@ -33,7 +33,7 @@
 <body>
     
     @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.layout.header')
-
+    @include('theme.'.env('FRONTEND_TEMPLATE', 'mikisan').'.layout.banner')
     @yield('content')
 
     @if(!empty($page->album) && $page->album->id != 0)

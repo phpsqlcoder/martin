@@ -32,7 +32,7 @@
 				@csrf
 				<div class="form-group">
 					<label class="d-block">Page Title *</label>
-					<input type="text" class="form-control @error('page_title') is-invalid @enderror" name="page_title" id="page_title" value="{{ old('page_title') }}" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
+					<input type="text" class="form-control @error('page_title') is-invalid @enderror" maxlength="150" name="page_title" id="page_title" value="{{ old('page_title') }}" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
                     @hasError(['inputName' => 'page_title'])
                     @endhasError
                     <small id="page_slug"></small>

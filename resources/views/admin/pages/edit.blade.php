@@ -36,7 +36,7 @@
 				@method('PUT')
 				<div class="form-group">
 					<label class="d-block">Page Title *</label>
-                    <input type="text" class="form-control @error('page_title') is-invalid @enderror" name="page_title" id="page_title" value="{{ old('page_title', $page->name) }}" required>
+                    <input type="text" class="form-control @error('page_title') is-invalid @enderror" maxlength="150" name="page_title" id="page_title" value="{{ old('page_title', $page->name) }}" required>
                     @hasError(['inputName' => 'page_title'])
                     @endhasError
                     <small id="page_slug"><a target="_blank" href="{{env('APP_URL')}}/{{$page->slug}}">{{env('APP_URL')}}/{{$page->slug}}</a></small>

@@ -131,7 +131,7 @@
                                         <label class="custom-control-label" for="checkbox_all"></label>
                                     </div>
                                 </th>
-                                <th style="width: 40%;overflow: hidden;">Title</th>
+                                <th style="width: 30%;">Title</th>
                                 <th style="width: 10%;">Label</th>
                                 <th style="width: 10%;">Visibility</th>
                                 <th style="width: 10%;">Last Date Modified</th>

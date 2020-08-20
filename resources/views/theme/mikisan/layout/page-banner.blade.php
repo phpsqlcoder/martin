@@ -13,14 +13,14 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h2>{{ $page->name }}</h2>
+                                       {{--  <h2>{{ $page->name }}</h2>
                                         @if(isset($breadcrumb))
                                             <ul class="crumbs">
                                                 @foreach($breadcrumb as $link => $url)
                                                     <li><a href="{{$url}}">{{$link}}</a></li>
                                                 @endforeach
                                             </ul>
-                                        @endif
+                                        @endif --}}
                                     </div>
                                 </div>
                             </div>
