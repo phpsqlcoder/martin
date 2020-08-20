@@ -47,14 +47,14 @@
                                 <div class="form-group">
                                     <div id="company" class="parsley-input">
                                         <label>Company Name <span class="tx-danger">*</span></label>
-                                        <input type="text" name="company_name" data-toggle="tooltip" data-placement="right" data-title="The company name will appear at the footer of your website" class="form-control" value="{{ old('company_name',$web->company_name) }}" data-parsley-class-handler="#company" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
+                                        <input type="text" name="company_name" maxlength="150" data-toggle="tooltip" data-placement="right" data-title="The company name will appear at the footer of your website" class="form-control" value="{{ old('company_name',$web->company_name) }}" data-parsley-class-handler="#company" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div id="website" class="parsley-input">
                                         <label>Website Name <span class="tx-danger">*</span></label>
-                                        <input type="text" name="website_name" data-toggle="tooltip" data-placement="right" data-title="The website name will appear at the login page of your CMS" class="form-control" value="{{ old('website_name',$web->website_name) }}" data-parsley-class-handler="#website" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
+                                        <input type="text" name="website_name" maxlength="150"  data-toggle="tooltip" data-placement="right" data-title="The website name will appear at the login page of your CMS" class="form-control" value="{{ old('website_name',$web->website_name) }}" data-parsley-class-handler="#website" required @htmlValidationMessage({{__('standard.empty_all_field')}})>
                                     </div>
                                 </div>
 
