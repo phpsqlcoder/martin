@@ -44,7 +44,7 @@ p::selection {background:#F28705;color:white;}
 		img {height:100%;width:100%;}
 	}
 	.banner-image.article img {filter: blur(9px);-webkit-filter: blur(9px);}
-	i {color:white;top:50%;font-size:1.5rem;cursor: pointer;
+	i {color:$fourth-color;top:50%;font-size:1.5rem;cursor: pointer;
 		&:hover {color:darkgray;}
 	}
 }

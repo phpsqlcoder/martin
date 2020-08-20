@@ -93,7 +93,7 @@ p::selection {
     filter: blur(9px);
     -webkit-filter: blur(9px); }
   .main-banner i {
-    color: white;
+    color: #ff5858;
     top: 50%;
     font-size: 1.5rem;
     cursor: pointer; }
